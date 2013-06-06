@@ -3,7 +3,8 @@
  */
 exports.handle ={
   '/':require('./action/index'),
-  '/testCookie':require("./action/testCookie")
+  '/testCookie':require("./action/testCookie"),
+  '/testUUID':require("./action/testUUID")
 };
 
 
