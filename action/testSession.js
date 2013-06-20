@@ -7,7 +7,7 @@ function TestSession(){
 	},
 	this.get = function(request,response){
 		var session = new Session(request,response);
-		response.end(session.getValue("name"));
+		response.write(session.getValue("name"));
 	}
 }
 

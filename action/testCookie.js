@@ -7,7 +7,7 @@ function TestCookie(){
 		cookie.flush();
 		response.write(cookie.getSessionId());
 		response.end();
-	}
+	};
 	this.override = function(request,response){
 		var cookie = new Cookie(request,response);
 		console.log("从客户端获取的cookie是 "+cookie.getValue("color"))
@@ -20,7 +20,20 @@ function TestCookie(){
 		co.flush();
 		response.write(cookie.getSessionId());
 		response.end();
-	}
+	};
+	this.getCookie = function(request,response){
+		var cookie = new Cookie(request,response);
+		var value = cookie.getValue("color");
+		console.log("getValue："+value);
+		response.write(value);
+	};
+	this.setCookie = function(request,response){
+		var cookie = new Cookie(request,response);
+		console.log(this.color);
+		cookie.setValue("color",this.color);
+		cookie.flush();
+		response.end();
+	};
 	
 }
 
