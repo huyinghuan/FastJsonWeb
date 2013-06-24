@@ -9,3 +9,13 @@ exports.handle ={
   '/testNewResponse'	:	"/action/testNewResponse",
   '/testFileDownload'	:	"/action/testFileDownload"
 };
+
+/*
+	exports.handle ={
+		"/":{
+			"index" : "index",
+			"*ndex" : "hello{1}",
+			"*de*"	: "/{1}/{2}"
+		}
+	}
+*/
