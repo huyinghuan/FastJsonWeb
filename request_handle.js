@@ -1,6 +1,8 @@
 /**
   请求映射
  */
+ /*
+ //普通映射
 exports.handle ={
   '/'					:	'/action/index',
   '/testCookie' 		:	"/action/testCookie",
@@ -9,13 +11,16 @@ exports.handle ={
   '/testNewResponse'	:	"/action/testNewResponse",
   '/testFileDownload'	:	"/action/testFileDownload"
 };
-
-/*
-	exports.handle ={
-		"/":{
-			"index" : "index",
-			"*ndex" : "hello{1}",
-			"*de*"	: "/{1}/{2}"
-		}
-	}
 */
+
+//smartrouter
+exports.handle = {
+	"/" : {
+		"*" : "action/{1}",
+		"*/*" : "{1}/{2}"
+	},
+	"/index":{
+		"*UUID" : "/action/{1}NewResponse",
+		"test*" : "/action/test{1}",
+	}
+} 	

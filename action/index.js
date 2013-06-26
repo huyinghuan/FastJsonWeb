@@ -1,6 +1,6 @@
 function Index(){
 	this.execute = function(request,response){
-		response.write('<h1 align="center">Index !!!!!!</h1>');
+		response.write('<h1 align="center">Index !!!!!!</h1>',"HTML");
 		response.end();
 	},
 	this.dmi =  function(request,response){

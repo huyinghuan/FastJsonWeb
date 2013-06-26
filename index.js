@@ -4,7 +4,8 @@ fastjsonweb.setRouterHandle(routerHandle.handle);//设置映射关系
 //fastjsonweb.setStaticResourceDir("/static");//设置静态文件路径
 fastjsonweb.globelConfigure({
 	static:"/static",
-	sessiontimeout:30
+	sessiontimeout:30,
+	smartrouter:true
 });
 var app = fastjsonweb.createServer();
 app.listen(8888);
