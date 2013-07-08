@@ -6,7 +6,13 @@ fastjsonweb.globelConfigure({
 	'static':"/static",
 	'sessiontimeout':30,
 	'smartrouter':true,
-  '404':require("./nopage")
+  '404':require("./nopage"),
+  'viewEngine':{
+     path:"/view",
+     name:"ejs",
+     suffix:"ejs",
+     engine:require('ejs')
+  }
 });
 var app = fastjsonweb.createServer();
 app.listen(8888);

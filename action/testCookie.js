@@ -6,7 +6,7 @@ function TestCookie(){
 		cookie.setValue("color",this.color);
 		cookie.flush();
 		response.write(cookie.getSessionId());
-		response.end();
+		//response.end();
 	};
 	this.override = function(request,response){
 		var cookie = new Cookie(request,response);
@@ -19,7 +19,7 @@ function TestCookie(){
 		co.setValue("name","huyinghuan");
 		co.flush();
 		response.write(cookie.getSessionId());
-		response.end();
+//		response.end();
 	};
 	this.getCookie = function(request,response){
 		var cookie = new Cookie(request,response);
