@@ -9,9 +9,9 @@ fastjsonweb.globelConfigure({
   '404':require("./nopage"),
   'viewEngine':{
      path:"/view",
-     name:"ejs",
-     suffix:"ejs",
-     engine:require('ejs')
+     name:"jade",//ejs
+     suffix:"jade",
+     engine:require('jade') //require('ejs')
   }
 });
 var app = fastjsonweb.createServer();
