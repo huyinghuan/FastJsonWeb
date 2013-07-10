@@ -1,5 +1,6 @@
 var routerHandle = require("./request_handle");
 var fastjsonweb = require("fastjsonweb");
+
 fastjsonweb.setRouterHandle(routerHandle.handle);//设置映射关系
 //fastjsonweb.setStaticResourceDir("/static");//设置静态文件路径
 fastjsonweb.globelConfigure({
@@ -12,6 +13,10 @@ fastjsonweb.globelConfigure({
      name:"jade",//ejs
      suffix:"jade",
      engine:require('jade') //require('ejs')
+  },
+  'filter':{
+      path:"/filter",
+      sequence:['filter3','filter1','filter2']
   }
 });
 var app = fastjsonweb.createServer();
