@@ -8,6 +8,7 @@ fastjsonweb.globelConfigure({
 	'sessiontimeout':30,
 	'smartrouter':true,
   '404':require("./nopage"),
+  /*
   'viewEngine':{
      path:"/view",
      name:"jade",//ejs
@@ -17,7 +18,7 @@ fastjsonweb.globelConfigure({
   'filter':{
       path:"/filter",
       sequence:['filter3','filter1','filter2']
-  }
+  }*/
 });
 var app = fastjsonweb.createServer();
 app.listen(8888);
