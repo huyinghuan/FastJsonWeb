@@ -1,0 +1,10 @@
+{
+	"/" : {
+		"*" : "action/{1}",
+		"*/*" : "{1}/{2}"
+	},
+	"/index":{
+		"*UUID" : "/action/{1}NewResponse",
+		"test*" : "/action/test{1}"
+	}
+} 	
