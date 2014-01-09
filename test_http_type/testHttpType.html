@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	/*
+		$(function(){
+			$("#sub").click(function(){
+				$.get("/!get",$("#form").serialize(),function(data){
+					console.log("提交数据是："+$("#form").serialize());
+					console.log("结果是：")
+					console.log(data);
+				});
+			});
+			$("#subp").click(function(){
+				$.post("/!post",$("#form").serialize(),function(data){
+					console.log("提交数据是："+$("#form").serialize());
+					console.log("结果是：")
+					console.log(data);
+				});
+			});
+			getCookie();
+			$("#sendCookie").click(function(){
+				console.log("123:"+$("#newCookie").val());
+				$.post("/testCookie!setCookie",{color:$("#newCookie").val()},function(data){
+					getCookie();
+				});
+			});
+		});*/
+	</script>
+</head>
+
+<body>
+	<form action="http://localhost:8888"  method="post">
+		用户名：<input name="name">
+		<!-- 
+		用户名：<input name="user.username">
+		-->
+		密码：	<input name="password">
+		密码：	<input name="password">
+		<input type="button" id="sub" value="get登陆"/>
+		<input type="button" id="subp" value="post登陆"/>
+		<input type="submit" value="SendCookie" />
+	</form>
+
+	<hr>
+
+	<form action="http://localhost:8888">
+		用户名：<input name="name">
+		<!-- 
+		用户名：<input name="user.username">
+		
+		密码：	<input name="user.password">
+		-->
+		<input type="button" id="sub" value="get登陆"/>
+		<input type="button" id="subp" value="post登陆"/>
+		<input type="submit" value="SendCookie" />
+	</form>
+</body>
+</html>
